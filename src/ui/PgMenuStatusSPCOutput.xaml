@@ -1,0 +1,239 @@
+﻿<Page x:Class="VisionInspection.PgMenuStatusSPCOutput"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:oxy="http://oxyplot.org/wpf"
+      xmlns:local="clr-namespace:VisionInspection"
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="1300"
+      Title="PgMenuStatusSPCOutput">
+
+    <Grid Background="#dddddd">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Margin="0,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="8*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" BorderThickness="2" BorderBrush="#bbbbbb">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Foreground="#FF0F53BE" FontSize="24" FontWeight="Bold" 
+                               Margin="20,0,0,0" VerticalAlignment="Center">
+                        Output Count
+                    </TextBlock>
+                </Grid>
+            </Border>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <TabControl Grid.Column="0" FontSize="20">
+                    <TabItem Header="SPC Search" Name="tabSearch">
+                        <Grid>
+                            <DataGrid x:Name="dgridResults" FontSize="16"
+                              CanUserAddRows="false" CanUserDeleteRows="False" SelectionMode="Single"
+                              AutoGenerateColumns="False" HorizontalContentAlignment="Center">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="{Binding searchTime}"
+                                                        Binding="{Binding RowTitle}" Width="200"></DataGridTextColumn>
+                                    <DataGridTextColumn Header="TOTAL" 
+                                                        Binding="{Binding TotalCount}" Width="1*"></DataGridTextColumn>
+                                    <DataGridTextColumn Header="PASS" 
+                                                        Binding="{Binding OkCount}" Width="1*"></DataGridTextColumn>
+                                    <DataGridTextColumn Header="NG" 
+                                                        Binding="{Binding NgCount}" Width="1*"></DataGridTextColumn>
+                                    <DataGridTextColumn Header="EM" 
+                                                        Binding="{Binding EmCount}" Width="1*"></DataGridTextColumn>
+                                    <DataGridTextColumn Header="YIELD" 
+                                                        Binding="{Binding YieldString}" Width="1*"></DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </TabItem>
+
+                    <TabItem Header="Total Graph" Name="tabTotal">
+                        <oxy:PlotView x:Name="plotTotal" Model="{Binding MyModel}" 
+                                      Margin="10,10,10,10" Padding="10,10,10,10"></oxy:PlotView>
+                    </TabItem>
+
+                    <TabItem Header="Time Graph" Name="tabTime">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="0*"/>
+                            </Grid.RowDefinitions>
+
+                            <oxy:PlotView Grid.Row="0" x:Name="plotTime" Model="{Binding MyModel}" 
+                                          Margin="10,10,10,10" Padding="10,10,10,10"/>
+                            
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <DataGrid Grid.Column="0" x:Name="dgridSearch" FontSize="16"
+                                      CanUserAddRows="false" CanUserDeleteRows="False" SelectionMode="Single"
+                                      AutoGenerateColumns="False" HorizontalContentAlignment="Center">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="LOT ID"
+                                                        Binding="{Binding RowTitle}" Width="200"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="TOTAL" 
+                                                        Binding="{Binding TotalCount}" Width="1*"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="GOOD" 
+                                                        Binding="{Binding OkCount}" Width="1*"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="NG" 
+                                                        Binding="{Binding NgCount}" Width="1*"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="EM" 
+                                                        Binding="{Binding EmCount}" Width="1*"></DataGridTextColumn>
+                                        <DataGridTextColumn Header="YIELD" 
+                                                        Binding="{Binding YieldString}" Width="1*"></DataGridTextColumn>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                                <Button Grid.Column="1" x:Name="btLotSearch" Margin="2,0,2,0" Style="{StaticResource mButton}">
+                                    <StackPanel>
+                                        <Image Source="search.png" Width="60"/>
+                                        <TextBlock FontSize="20" FontWeight="Bold" Foreground="DodgerBlue">Search Again</TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+
+                <Grid Grid.Column="1" Margin="10,5,5,0">
+                    <Grid.Resources>
+                        <Style TargetType="Button" BasedOn="{StaticResource mButton}">
+                            <Setter Property="Margin" Value="2,2,2,2"/>
+                            <Setter Property="FontSize" Value="20"/>
+                            <Setter Property="VerticalAlignment" Value="Stretch"/>
+                        </Style>
+                        <Style TargetType="RadioButton">
+                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                        </Style>
+                               
+                    </Grid.Resources>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Row="0" x:Name="btReadAgain" Margin="2,2,2,2">
+                        <StackPanel Orientation="Horizontal" Margin="0,2,0,2">
+                            <Image Source="continue.png"/>
+                            <TextBlock VerticalAlignment="Center" 
+                                       Margin="4,0,0,0" FontSize="24">Read Again</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <GroupBox Grid.Row="1" Header="Display Type" FontSize="20">
+                        <UniformGrid Rows="4">
+                            <RadioButton x:Name="rdViewMonthInYear" IsChecked="True">View month / year</RadioButton>
+                            <RadioButton x:Name="rdViewWeekInYear">View weeks / year</RadioButton>
+                            <RadioButton x:Name="rdViewWeekInMonth">View weeks / month</RadioButton>
+                            <RadioButton x:Name="rdViewDayInMonth">View day / month</RadioButton>
+                        </UniformGrid>
+                    </GroupBox>
+                    <UniformGrid Grid.Row="2" x:Name="ugridMonths" Rows="6" Columns="2" Margin="0,4,0,0">
+                        <Button x:Name="bt1Month">1month</Button>
+                        <Button x:Name="bt2Month">2month</Button>
+                        <Button x:Name="bt3Month">3month</Button>
+                        <Button x:Name="bt4Month">4month</Button>
+                        <Button x:Name="bt5Month">5month</Button>
+                        <Button x:Name="bt6Month">6month</Button>
+                        <Button x:Name="bt7Month">7month</Button>
+                        <Button x:Name="bt8Month">8month</Button>
+                        <Button x:Name="bt9Month">9month</Button>
+                        <Button x:Name="bt10Month">10month</Button>
+                        <Button x:Name="bt11Month">11month</Button>
+                        <Button x:Name="bt12Month">12month</Button>
+                    </UniformGrid>
+                    <UniformGrid Grid.Row="3" Rows="2" Columns="2">
+                        <Button x:Name="btPreMonth">
+                            <StackPanel>
+                                <Image Source="up.png" Height="30"/>
+                                <TextBlock>pre month</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btNextMonth">
+                            <StackPanel>
+                                <Image Height="30" Source="down.png"/>
+                                <TextBlock>next month</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btPreYear">
+                            <StackPanel VerticalAlignment="Stretch">
+                                <Image Source="left.png" Height="30"/>
+                                <TextBlock>pre year</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btNextYear">
+                            <StackPanel>
+                                <Image Source="right.png" Height="30"/>
+                                <TextBlock>next year</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </UniformGrid>
+                    <Label Grid.Row="4" x:Name="lblYear"
+                           HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                           Background="Black" Foreground="Yellow" FontSize="20">2020</Label>
+                    <Button Grid.Row="5" x:Name="btSaveToExcel" Margin="2,2,2,2">
+                        <StackPanel Orientation="Horizontal" Margin="0,2,0,2">
+                            <Image Source="menu-save.png"/>
+                            <TextBlock x:Name="tvSaveToExcel" VerticalAlignment="Center" Margin="4,0,0,0">
+                                Save to Excel file <LineBreak/>(2020year)
+                            </TextBlock>                            
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Border Grid.Column="1" BorderThickness="2" BorderBrush="#cccccc" Margin="0,0,0,0">
+            <Grid>
+                <Grid.Resources>
+                    <Style TargetType="Button" BasedOn="{StaticResource mButton}">
+                        <Setter Property="FontSize" Value="24"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="Padding" Value="10,0,0,0"/>
+                        <Setter Property="Background" Value="LightGray"/>
+                        <Setter Property="Margin" Value="4,2,4,2"/>
+                    </Style>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="4*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" BorderBrush="#cccccc" BorderThickness="1" Margin="0,0,0,0">
+                    <TextBlock VerticalAlignment="Center"  HorizontalAlignment="Center"
+                               Foreground="#FF13ABE9"
+                               FontSize="20" FontWeight="Bold">Status Menu</TextBlock>
+                </Border>
+                <Button Grid.Row="1" Name="btLog">Log</Button>
+                <Button Grid.Row="2" Name="btSpcOutput" Background="SkyBlue">SPC Output</Button>
+                <Button Grid.Row="3" Name="btSpcSearch">SPC Search</Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

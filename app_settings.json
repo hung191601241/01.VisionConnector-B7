@@ -1,0 +1,565 @@
+{
+  "currentModel": "B7 Main",
+  "PassWordEN": "itm",
+  "PassWordADM": "itm",
+  "UseName": "Operator",
+  "Operator": "Operator",
+  "connection": {
+    "scanner1": {
+      "IpAddr": "192.168.3.100",
+      "TcpPort": 9004
+    },
+    "scanner2": {
+      "IpAddr": "192.168.3.101",
+      "TcpPort": 9004
+    },
+    "VerUpDate": "0",
+    "DateUpdate": "2024-11-12",
+    "modelName": "Model Current",
+    "Recipe": "Machine",
+    "model": "WPMP",
+    "model1": "Model 01",
+    "model2": "Model 02",
+    "model3": "Model 03",
+    "camera1": {
+      "name": "",
+      "fileConf": "",
+      "ExposeTime": 70000,
+      "device": {
+        "nMajorVer": 0,
+        "nMinorVer": 0,
+        "nMacAddrHigh": 0,
+        "nMacAddrLow": 0,
+        "nTLayerType": 4,
+        "nReserved": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "SpecialInfo": {
+          "stGigEInfo": "gQGDgt8rAQACAAAAMkJERkE1MTg4NzUzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEhpa3JvYm90AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABNVi1DUzIwMC1SQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYyLjIuMCAyNDA3MDMgMTMxMjcxMQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIaWtyb2JvdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREE1MTg4NzUzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAwAAAwAAAAAAAAAAAAAA",
+          "stCamLInfo": "gQGDgt8rAQACAAAAMkJERkE1MTg4NzUzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEhpa3JvYm90AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABNVi1DUzIwMC1SQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYyLjIuMCAyNDA3MDMgMTMxMjcxMQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIaWtyb2JvdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREE1MTg4NzUzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAwAAAwAAAAAAAAAAAAAA",
+          "stUsb3VInfo": "gQGDgt8rAQACAAAAMkJERkE1MTg4NzUzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEhpa3JvYm90AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABNVi1DUzIwMC1SQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYyLjIuMCAyNDA3MDMgMTMxMjcxMQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIaWtyb2JvdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREE1MTg4NzUzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAwAAAwAAAAAAAAAAAAAA"
+        }
+      },
+      "OffsetAlignJigX": 10,
+      "OffsetAlignJigY": 10,
+      "mediumGrayVal": 10,
+      "scale": 0.12
+    },
+    "camera2": {
+      "name": "",
+      "fileConf": "",
+      "ExposeTime": 70000,
+      "device": {
+        "nMajorVer": 0,
+        "nMinorVer": 0,
+        "nMacAddrHigh": 0,
+        "nMacAddrLow": 0,
+        "nTLayerType": 4,
+        "nReserved": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "SpecialInfo": {
+          "stGigEInfo": "gQGDgt8rAQABAAAAMkJERkE1MTg4NzUyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEhpa3JvYm90AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABNVi1DUzIwMC1SQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYyLjIuMCAyNDA3MDMgMTMxMjcxMQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIaWtyb2JvdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREE1MTg4NzUyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAwAAAgAAAAAAAAAAAAAA",
+          "stCamLInfo": "gQGDgt8rAQABAAAAMkJERkE1MTg4NzUyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEhpa3JvYm90AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABNVi1DUzIwMC1SQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYyLjIuMCAyNDA3MDMgMTMxMjcxMQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIaWtyb2JvdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREE1MTg4NzUyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAwAAAgAAAAAAAAAAAAAA",
+          "stUsb3VInfo": "gQGDgt8rAQABAAAAMkJERkE1MTg4NzUyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEhpa3JvYm90AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABNVi1DUzIwMC1SQwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYyLjIuMCAyNDA3MDMgMTMxMjcxMQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIaWtyb2JvdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREE1MTg4NzUyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAwAAAgAAAAAAAAAAAAAA"
+        }
+      },
+      "OffsetAlignJigX": 10,
+      "OffsetAlignJigY": 10,
+      "mediumGrayVal": 10,
+      "scale": 0.12
+    },
+    "camera3": {
+      "name": "",
+      "fileConf": "",
+      "ExposeTime": 5000,
+      "device": {
+        "nMajorVer": 0,
+        "nMinorVer": 0,
+        "nMacAddrHigh": 0,
+        "nMacAddrLow": 0,
+        "nTLayerType": 0,
+        "nReserved": null,
+        "SpecialInfo": {
+          "stGigEInfo": null,
+          "stCamLInfo": null,
+          "stUsb3VInfo": null
+        }
+      },
+      "OffsetAlignJigX": 10,
+      "OffsetAlignJigY": 10,
+      "mediumGrayVal": 10,
+      "scale": 0.12
+    },
+    "camera4": {
+      "name": "",
+      "fileConf": "",
+      "ExposeTime": 5000,
+      "device": {
+        "nMajorVer": 0,
+        "nMinorVer": 0,
+        "nMacAddrHigh": 0,
+        "nMacAddrLow": 0,
+        "nTLayerType": 0,
+        "nReserved": null,
+        "SpecialInfo": {
+          "stGigEInfo": null,
+          "stCamLInfo": null,
+          "stUsb3VInfo": null
+        }
+      },
+      "OffsetAlignJigX": 10,
+      "OffsetAlignJigY": 10,
+      "mediumGrayVal": 10,
+      "scale": 0.12
+    },
+    "image": {
+      "CH1_path": "",
+      "CH2_path": ""
+    },
+    "EquipmentName": "QRCCD03\u0000\u0000",
+    "scanner": {
+      "portName": "COM1",
+      "baudrate": 9600,
+      "dataBits": 8,
+      "stopBits": 1,
+      "parity": 0
+    },
+    "SelectModeCOM": false
+  },
+  "run": {
+    "jamAction": true,
+    "autoJigEnd": true,
+    "qrCrossCheck": true,
+    "mesOnline": true,
+    "CheckMixLot": true,
+    "ByPassVision": false,
+    "CheckDoubleCode": true,
+    "PackingOnline": false,
+    "SortingMode": false,
+    "PackingEnd": false,
+    "PackingQROnline": false,
+    "scannerOnline": true,
+    "MachineQR": true,
+    "scannerNumberTrigger": 1
+  },
+  "SettingModel": {
+    "SetupColum1": 5,
+    "NameMachine1": "ITM SEMICONDUCTOR"
+  },
+  "MesSettings1": {
+    "localIp": "192.168.31.60",
+    "localPort": 5010,
+    "MESName": "",
+    "Is_Enable_Log": true
+  },
+  "lotData": {
+    "workGroup": "OK",
+    "LotId": "",
+    "Config": "",
+    "lotQty": 10000,
+    "LotStart": "0001-01-01T00:00:00",
+    "QrYield": "",
+    "deviceId": "SU2500250",
+    "lotId": "5161N",
+    "lotCount": 0,
+    "QRNG": 0,
+    "QROK": 0
+  },
+  "FTPClientSettings": {
+    "Image": "1.jpg",
+    "Host": "192.168.54.217",
+    "Port": 38,
+    "UserID": "AUTOMATION_ITM",
+    "PassWord": "1",
+    "FolderServer": "/Project Hao"
+  },
+  "Robot": {
+    "XaxisJogSpeed": 1000,
+    "ZaxisJogSpeed": 1000,
+    "TeachDataXaxis": {
+      "BendingPos": 0,
+      "readyPos": 0,
+      "QrPos": 0,
+      "QrScapPos": 0,
+      "MesScapPos": 0,
+      "MatingPos": 0,
+      "BendingPosSpeed": 0,
+      "readyPosSpeed": 0,
+      "QrPosSpeed": 0,
+      "QrScapPosSpeed": 0,
+      "MesScapPosSpeed": 0,
+      "MatingPosSpeed": 0
+    },
+    "TeachDataYaxis": {
+      "BendingPos": 0,
+      "readyPos": 0,
+      "QrPos": 0,
+      "QrScapPos": 0,
+      "MesScapPos": 0,
+      "MatingPos": 0,
+      "BendingPosSpeed": 0,
+      "readyPosSpeed": 0,
+      "QrPosSpeed": 0,
+      "QrScapPosSpeed": 0,
+      "MesScapPosSpeed": 0,
+      "MatingPosSpeed": 0
+    },
+    "TeachDataYaxis1": {
+      "BendingPos": 0,
+      "readyPos": 0,
+      "QrPos": 0,
+      "QrScapPos": 0,
+      "MesScapPos": 0,
+      "MatingPos": 0,
+      "BendingPosSpeed": 0,
+      "readyPosSpeed": 0,
+      "QrPosSpeed": 0,
+      "QrScapPosSpeed": 0,
+      "MesScapPosSpeed": 0,
+      "MatingPosSpeed": 0
+    },
+    "TeachSpeedYaxis": {
+      "BendingPos": 0,
+      "readyPos": 0,
+      "QrPos": 0,
+      "QrScapPos": 0,
+      "MesScapPos": 0,
+      "MatingPos": 0,
+      "BendingPosSpeed": 0,
+      "readyPosSpeed": 0,
+      "QrPosSpeed": 0,
+      "QrScapPosSpeed": 0,
+      "MesScapPosSpeed": 0,
+      "MatingPosSpeed": 0
+    },
+    "TeachSpeedYaxis1": {
+      "BendingPos": 0,
+      "readyPos": 0,
+      "QrPos": 0,
+      "QrScapPos": 0,
+      "MesScapPos": 0,
+      "MatingPos": 0,
+      "BendingPosSpeed": 0,
+      "readyPosSpeed": 0,
+      "QrPosSpeed": 0,
+      "QrScapPosSpeed": 0,
+      "MesScapPosSpeed": 0,
+      "MatingPosSpeed": 0
+    },
+    "TeachDataXaxis1": {
+      "BendingPos1": 0,
+      "readyPos1": 0,
+      "QrPos1": 0,
+      "QrScapPos1": 0,
+      "MesScapPos1": 0,
+      "MatingPos1": 0,
+      "BendingPosSpeed1": 0,
+      "readyPosSpeed1": 0,
+      "QrPosSpeed1": 0,
+      "QrScapPosSpeed1": 0,
+      "MesScapPosSpeed1": 0,
+      "MatingPosSpeed1": 0
+    },
+    "TeachDataZaxis": {
+      "BendingPos": 0,
+      "readyPos": 0,
+      "QrPos": 0,
+      "QrScapPos": 0,
+      "MesScapPos": 0,
+      "MatingPos": 0,
+      "BendingPosSpeed": 0,
+      "readyPosSpeed": 0,
+      "QrPosSpeed": 0,
+      "QrScapPosSpeed": 0,
+      "MesScapPosSpeed": 0,
+      "MatingPosSpeed": 0
+    },
+    "TeachDataZaxis1": {
+      "BendingPos1": 0,
+      "readyPos1": 0,
+      "QrPos1": 0,
+      "QrScapPos1": 0,
+      "MesScapPos1": 0,
+      "MatingPos1": 0,
+      "BendingPosSpeed1": 0,
+      "readyPosSpeed1": 0,
+      "QrPosSpeed1": 0,
+      "QrScapPosSpeed1": 0,
+      "MesScapPosSpeed1": 0,
+      "MatingPosSpeed1": 0
+    }
+  },
+  "CurrentModel": {
+    "Name": "2833",
+    "ROI": {
+      "listRectangle": [],
+      "angleLst": []
+    },
+    "WhitePixels": 100,
+    "BlackPixels": 10,
+    "MatchingRate": 100,
+    "MatchingRateMin": 70,
+    "Threshol": 127,
+    "ThresholBl": 40,
+    "CirWhCntEnb": true,
+    "RoiWhCntEnb": false,
+    "BarCodeOffSet": {
+      "X": 0,
+      "Y": 0
+    },
+    "OffSetJigEnb": false,
+    "dLJobs": [
+        {
+            "name": "1. Short",
+            "Wspace": "C:\\Users\\User\\Desktop\\FILE RUNTIMEm\\B7Main 1.Short.vrws",
+            "Score": 50
+        },
+        {
+            "name": "2. Double",
+            "Wspace": "C:\\Users\\User\\Desktop\\FILE RUNTIMEm\\B7Main 2.Double.vrws",
+            "Score": 90
+        },
+        {
+            "name": "3. Deform",
+            "Wspace": "C:\\Users\\User\\Desktop\\FILE RUNTIMEm\\B7Main 3.Deform.vrws",
+            "Score": 79
+        },
+        {
+            "name": "4. Crack",
+            "Wspace": "C:\\Users\\User\\Desktop\\FILE RUNTIMEm\\B7Main 4.Crack CNT.vrws",
+            "Score": 70
+        },
+        {
+            "name": "6. Open Cnt",
+            "Wspace": "C:\\Users\\User\\Desktop\\FILE RUNTIMEm\\B7Main 6. OPEN SODER.vrws",
+            "Score": 73
+        },
+        {
+            "name": "5. Empty",
+            "Wspace": "C:\\Users\\User\\Desktop\\FILE RUNTIMEm\\B7Main 7.Empty.vrws",
+            "Score": 90
+        }
+    ],
+    "vsProJobs": []
+  },
+  "M01": {
+    "Name": "WPMP",
+    "ROI": {
+      "listRectangle": [
+        {
+          "X": 1927,
+          "Y": 28,
+          "Width": 1700,
+          "Height": 966,
+          "Top": 28,
+          "Bottom": 993,
+          "Left": 1927,
+          "Right": 3626,
+          "Location": {
+            "X": 1927,
+            "Y": 28
+          },
+          "Size": {
+            "Width": 1700,
+            "Height": 966
+          },
+          "TopLeft": {
+            "X": 1927,
+            "Y": 28
+          },
+          "BottomRight": {
+            "X": 3626,
+            "Y": 993
+          }
+        }
+      ],
+      "angleLst": []
+    },
+    "WhitePixels": 100,
+    "BlackPixels": 10,
+    "MatchingRate": 100,
+    "MatchingRateMin": 70,
+    "Threshol": 100,
+    "ThresholBl": 40,
+    "CirWhCntEnb": true,
+    "RoiWhCntEnb": false,
+    "BarCodeOffSet": {
+      "X": 0,
+      "Y": 0
+    },
+    "OffSetJigEnb": false,
+    "dLJobs": null,
+    "vsProJobs": []
+  },
+  "M02": {
+    "Name": "WPMP",
+    "ROI": {
+      "listRectangle": [
+        {
+          "X": 1953,
+          "Y": 69,
+          "Width": 1509,
+          "Height": 907,
+          "Top": 69,
+          "Bottom": 975,
+          "Left": 1953,
+          "Right": 3461,
+          "Location": {
+            "X": 1953,
+            "Y": 69
+          },
+          "Size": {
+            "Width": 1509,
+            "Height": 907
+          },
+          "TopLeft": {
+            "X": 1953,
+            "Y": 69
+          },
+          "BottomRight": {
+            "X": 3461,
+            "Y": 975
+          }
+        }
+      ],
+      "angleLst": []
+    },
+    "WhitePixels": 100,
+    "BlackPixels": 10,
+    "MatchingRate": 100,
+    "MatchingRateMin": 70,
+    "Threshol": 127,
+    "ThresholBl": 40,
+    "CirWhCntEnb": true,
+    "RoiWhCntEnb": false,
+    "BarCodeOffSet": {
+      "X": 0,
+      "Y": 0
+    },
+    "OffSetJigEnb": false,
+    "dLJobs": null,
+    "vsProJobs": []
+  },
+  "M03": {
+    "Name": "2833",
+    "ROI": {
+      "listRectangle": [],
+      "angleLst": []
+    },
+    "WhitePixels": 100,
+    "BlackPixels": 10,
+    "MatchingRate": 100,
+    "MatchingRateMin": 70,
+    "Threshol": 127,
+    "ThresholBl": 40,
+    "CirWhCntEnb": true,
+    "RoiWhCntEnb": false,
+    "BarCodeOffSet": {
+      "X": 0,
+      "Y": 0
+    },
+    "OffSetJigEnb": false,
+    "dLJobs": null,
+    "vsProJobs": []
+  },
+  "M04": {
+    "Name": "2833",
+    "ROI": {
+      "listRectangle": [],
+      "angleLst": []
+    },
+    "WhitePixels": 100,
+    "BlackPixels": 10,
+    "MatchingRate": 100,
+    "MatchingRateMin": 70,
+    "Threshol": 127,
+    "ThresholBl": 40,
+    "CirWhCntEnb": true,
+    "RoiWhCntEnb": false,
+    "BarCodeOffSet": {
+      "X": 0,
+      "Y": 0
+    },
+    "OffSetJigEnb": false,
+    "dLJobs": null,
+    "vsProJobs": []
+  },
+  "M05": {
+    "Name": "2833",
+    "ROI": {
+      "listRectangle": [],
+      "angleLst": []
+    },
+    "WhitePixels": 100,
+    "BlackPixels": 10,
+    "MatchingRate": 100,
+    "MatchingRateMin": 70,
+    "Threshol": 127,
+    "ThresholBl": 40,
+    "CirWhCntEnb": true,
+    "RoiWhCntEnb": false,
+    "BarCodeOffSet": {
+      "X": 0,
+      "Y": 0
+    },
+    "OffSetJigEnb": false,
+    "dLJobs": null,
+    "vsProJobs": []
+  },
+  "M06": {
+    "Name": "2833",
+    "ROI": {
+      "listRectangle": [],
+      "angleLst": []
+    },
+    "WhitePixels": 100,
+    "BlackPixels": 10,
+    "MatchingRate": 100,
+    "MatchingRateMin": 70,
+    "Threshol": 127,
+    "ThresholBl": 40,
+    "CirWhCntEnb": true,
+    "RoiWhCntEnb": false,
+    "BarCodeOffSet": {
+      "X": 0,
+      "Y": 0
+    },
+    "OffSetJigEnb": false,
+    "dLJobs": null,
+    "vsProJobs": []
+  },
+  "Property": {
+    "StrokeThickness": 10,
+    "labelFontSize": 50,
+    "rectSize": {
+      "Width": 40,
+      "Height": 40
+    }
+  },
+  "caseShowDataMatrixRT": false,
+  "user": {
+    "UserName": "Manager",
+    "IDSuperuser": "ITM123",
+    "NameSuperuser": "ITM",
+    "IDManager": "1",
+    "NameManager": "ITM",
+    "IdOP": "123",
+    "NameIdOP": "ITM"
+  },
+  "PLCTCP": {
+    "PLCip": "192.168.3.39",
+    "PLCport": 2004,
+    "PLCSlot": 1
+  },
+  "Jig": {
+    "rowCount": 5,
+    "columnCount": 2
+  }
+}

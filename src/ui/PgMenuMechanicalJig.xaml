@@ -1,0 +1,303 @@
+﻿<Page x:Class="VisionInspection.PgPlcMechanicalJig"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VisionInspection"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Title="Mechanical Menu">
+
+    <Grid Background="#dddddd">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Margin="2,0,2,2" Name="gridLeft">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" BorderThickness="2" BorderBrush="#bbbbbb">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Foreground="#FF0F53BE" FontSize="24" FontWeight="Bold" FontStyle="Italic" 
+                               Margin="20,0,0,0" VerticalAlignment="Center">
+                        Jig Information
+                    </TextBlock>
+                    <Button Grid.Column="1" x:Name="btSave" Style="{StaticResource mButton}" Margin="5,0,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="menu-save.png" />
+                            <TextBlock VerticalAlignment="Center" Margin="10,0,10,0"
+                                       FontSize="24" FontWeight="Bold">Save</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button Grid.Column="2" x:Name="btUndo" Style="{StaticResource mButton}" Margin="5,0,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="undo.png" />
+                            <TextBlock VerticalAlignment="Center" Margin="10,0,10,0"
+                                       FontSize="24" FontWeight="Bold">Restore</TextBlock>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </Border>
+            <Border Grid.Row="1" BorderThickness="2" BorderBrush="#bbbbbb">
+                <TextBlock x:Name="tvJigInfo" Foreground="Blue" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"
+                           Margin="20,0,0,0" VerticalAlignment="Center">
+                    8 X 3
+                </TextBlock>
+            </Border>
+
+            <Border Grid.Row="3" BorderThickness="2" BorderBrush="#bbbbbb" Background="Gray">
+                <TextBlock Foreground="White" FontSize="24" FontWeight="Bold"
+                           Margin="20,0,0,0" VerticalAlignment="Center">
+                    Jig Information Setting
+                </TextBlock>
+            </Border>
+            <Grid Grid.Row="4" Margin="20,0,20,0">
+                <Grid.Resources>
+                    <Style TargetType="Label">
+                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="FontSize" Value="24"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="Margin" Value="1,1,1,1"/>
+                        <Setter Property="Padding" Value="0,0,0,0"/>
+                        <Setter Property="BorderBrush" Value="#aaaaaa"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                    </Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Background" Value="Black"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                </Grid.Resources>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1.0*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Background="Gray">No.</Label>
+                    <Label Grid.Row="0" Grid.Column="1" Background="Gray">Name</Label>
+                    <Label Grid.Row="0" Grid.Column="2" Background="Gray">Value (mm)</Label>
+
+                    <Label Grid.Row="1" Grid.Column="0" Foreground="DarkRed">1</Label>
+                    <Label Grid.Row="1" Grid.Column="1" Background="DodgerBlue">X Pitch</Label>
+                    <TextBox Grid.Row="1" Grid.Column="2" x:Name="txtXPitch">10.00</TextBox>
+
+                    <Label Grid.Row="2" Grid.Column="0" Foreground="DarkRed">2</Label>
+                    <Label Grid.Row="2" Grid.Column="1" Background="DodgerBlue">Y Pitch</Label>
+                    <TextBox Grid.Row="2" Grid.Column="2" x:Name="txtYPitch">5.00</TextBox>
+
+                    <Label Grid.Row="3" Grid.Column="0" Foreground="DarkRed">3</Label>
+                    <Label Grid.Row="3" Grid.Column="1" Background="Green">Dummy X Offset</Label>
+                    <TextBox Grid.Row="3" Grid.Column="2" x:Name="txtX2Offset">5.00</TextBox>
+
+                    <Label Grid.Row="4" Grid.Column="0" Foreground="DarkRed">4</Label>
+                    <Label Grid.Row="4" Grid.Column="1" Background="Green">Dummy Y Offset</Label>
+                    <TextBox Grid.Row="4" Grid.Column="2" x:Name="txtY2Offset">2.00</TextBox>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Background="Gray">No.</Label>
+                    <Label Grid.Row="0" Grid.Column="1" Background="Gray">Name</Label>
+                    <Label Grid.Row="0" Grid.Column="2" Background="Gray">Value</Label>
+
+                    <Label Grid.Row="1" Grid.Column="0" Foreground="Blue">5</Label>
+                    <Label Grid.Row="1" Grid.Column="1" Background="DarkViolet">X Matrix</Label>
+                    <TextBox Grid.Row="1" Grid.Column="2" x:Name="txtXMatrix">10</TextBox>
+
+                    <Label Grid.Row="2" Grid.Column="0" Foreground="Blue">6</Label>
+                    <Label Grid.Row="2" Grid.Column="1" Background="DarkViolet">Y Matrix</Label>
+                    <TextBox Grid.Row="2" Grid.Column="2" x:Name="txtYMatrix">2</TextBox>
+                </Grid>
+                <Border Grid.Row="1" Grid.Column="0" Background="Silver" 
+                        Margin="2,2,0,2" BorderBrush="#eeeeee" BorderThickness="2">
+                    <Grid>
+                        <Grid.Resources>
+                            <Style TargetType="Label">
+                                <Setter Property="Margin" Value="5,3,5,3"/>
+                                <Setter Property="Padding" Value="0,0,0,0"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                <Setter Property="FontSize" Value="14"/>
+                                <Setter Property="Background" Value="Gold"/>
+                            </Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                            </Style>
+                        </Grid.Resources>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0">1</Label>
+                        <Label Grid.Row="0" Grid.Column="3">1</Label>
+                        <Label Grid.Row="3" Grid.Column="0">1</Label>
+                        <Label Grid.Row="3" Grid.Column="3">1</Label>
+
+                        <!--<Image Grid.Row="0" Grid.Column="1" Source="pattern2.png" HorizontalAlignment="Left"></Image>
+                        <Image Grid.Row="8" Grid.Column="1" Source="pattern6.png" HorizontalAlignment="Left"></Image>
+                        <Image Grid.Row="0" Grid.Column="2" Source="pattern0.png" HorizontalAlignment="Right"></Image>
+                        <Image Grid.Row="8" Grid.Column="2" Source="pattern4.png" HorizontalAlignment="Right"></Image>-->
+
+                        <!--<Image  Grid.Row="1" Grid.Column="3" Source="pattern1.png" 
+                                HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                        <Image  Grid.Row="1" Grid.Column="0" Source="pattern3.png" 
+                                HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                        <Image  Grid.Row="2" Grid.Column="3" Source="pattern5.png" 
+                                HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                        <Image  Grid.Row="2" Grid.Column="0" Source="pattern7.png" 
+                                HorizontalAlignment="Center" Margin="0,10,0,0"/>-->
+                    </Grid>
+                </Border>
+                <Grid Grid.Row="1" Grid.Column="1" Margin="15,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="1" Grid.Column="0" Background="SkyBlue">Jig Line ID (T01 ~ T99)</Label>                    
+                    <TextBox Grid.Row="2" Grid.Column="0" x:Name="txtJigLineId"  
+                             Margin="0,5,0,5" HorizontalContentAlignment="Left"
+                             FontSize="24" FontWeight="Normal"
+                             Background="White" Foreground="Blue">T01</TextBox>
+                    <Button Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" x:Name="btSaveJigLineId"
+                            Margin="5,0,5,5" Style="{StaticResource mButton}"
+                            FontSize="20" FontWeight="Bold" Foreground="Blue">ID SAVE</Button>
+
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="5" Background="Silver" Margin="0,5,0,0">
+                <TextBlock VerticalAlignment="Center" Margin="20,0,0,0"
+                           Foreground="White" FontSize="20">READING PATTERN</TextBlock>
+            </Grid>
+            <Border Grid.Row="6" Background="Silver">
+                <UniformGrid Columns="8" Margin="20,0,20,0">
+                    <UniformGrid.Resources>
+                        <Style TargetType="Button" BasedOn="{StaticResource mButton}">
+                            <Setter Property="Margin" Value="5,5,5,5"/>
+                            <Setter Property="FontSize" Value="30"/>
+                        </Style>
+                    </UniformGrid.Resources>
+
+                    <Button x:Name="btPattern0" IsEnabled="True">0</Button>
+                    <Button x:Name="btPattern1" IsEnabled="True">1</Button>
+                    <Button x:Name="btPattern2" IsEnabled="True">2</Button>
+                    <Button x:Name="btPattern3" IsEnabled="True">3</Button>
+                    <Button x:Name="btPattern4" IsEnabled="True">4</Button>
+                    <Button x:Name="btPattern5" IsEnabled="True">5</Button>
+                    <Button x:Name="btPattern6" IsEnabled="True">6</Button>
+                    <Button x:Name="btPattern7" IsEnabled="True">7</Button>
+                </UniformGrid>
+            </Border>
+        </Grid>
+
+        <Border Grid.Column="1" BorderThickness="1" BorderBrush="#cccccc" Margin="0,0,0,0">
+            <Grid>
+                <Grid.Resources>
+                    <Style TargetType="Button" BasedOn="{StaticResource mButton}">
+                        <Setter Property="FontSize" Value="24"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                        <Setter Property="Padding" Value="10,0,0,0"/>
+                        <Setter Property="Background" Value="LightGray"/>
+                        <Setter Property="Margin" Value="4,2,4,2"/>
+                    </Style>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="4*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" BorderBrush="#cccccc" BorderThickness="1" Margin="0,0,0,0">
+                    <TextBlock VerticalAlignment="Center"  HorizontalAlignment="Center"
+                               Foreground="#FF13ABE9"
+                               FontSize="20" FontWeight="Bold">Mechanical Menu</TextBlock>
+                </Border>
+                <Button Grid.Row="1" Background="SkyBlue" Name="btJig">
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Width="20" Height="30" Fill="DarkRed" />
+                        <TextBlock VerticalAlignment="Center" Padding="10,0,0,0">User Option</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Grid.Row="2" Name="btDelay">
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Width="20" Height="30" Fill="DarkGray" />
+                        <TextBlock VerticalAlignment="Center" Padding="10,0,0,0">Delay Time</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Grid.Row="3" Name="btBarcode">
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Width="20" Height="30" Fill="DarkGray" />
+                        <TextBlock VerticalAlignment="Center" Padding="10,0,0,0">Barcode Set</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Grid.Row="4" Name="btSpeed">
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Width="20" Height="30" Fill="DarkGray" />
+                        <TextBlock VerticalAlignment="Center" Padding="10,0,0,0">Speed Set</TextBlock>
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
