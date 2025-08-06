@@ -257,7 +257,8 @@ namespace VisionInspection
                 this.control.Dispose();
             }
             var control = new ViDi2.Runtime.Local.Control(ViDi2.GpuMode.Deferred);
-            control.InitializeComputeDevices(ViDi2.GpuMode.SingleDevicePerTool, new List<int>() { 0, 1 });
+            //control.InitializeComputeDevices(ViDi2.GpuMode.SingleDevicePerTool, new List<int>() { 0, 1 });
+            control.InitializeComputeDevices(ViDi2.GpuMode.SingleDevicePerTool, new List<int>() { 0 });
             this.control = control;
         }
         private void updateLotDataUI()
@@ -429,28 +430,11 @@ namespace VisionInspection
         private bool isLoadWsSuccess = false;
         void Init()
         {
-            Task tsk1 = new Task(() =>
-            {
-               /// Old Connect PLC
-            });
             Task tsk2 = new Task(() =>
             {
                 isLoadWsSuccess = false;
                 if (control.Workspaces.Count > 0)
                 {
-                    //int count = control.Workspaces.Count;
-                    //List<String> WsLst = new List<string> { };
-                    //for (int i = 0; i < count; i++)
-                    //{
-                    //    WsLst.Add(Workspaces[i].UniqueName);
-
-                    //}
-                    //for (int i = 0; i < WsLst.Count; i++)
-                    //{
-                    //    control.Workspaces.Remove(WsLst[i]);
-                    //}
-                    //WsLst.Clear();
-
                     // Lưu danh sách Workspace cần xóa
                     var toRemove = control.Workspaces.ToList();
                     foreach (var ws in toRemove)
@@ -492,33 +476,7 @@ namespace VisionInspection
                 }
                 isLoadWsSuccess = true;
             });
-            //Task tsk3 = new Task(() =>
-            //{
-            //    if(cogTbJobList.Count > 0)
-            //    {
-            //        cogTbJobList.Clear();
-            //    }   
-            //    foreach(VsProJob vpJob in vsProJob)
-            //    {
-            //        if(vpJob.VppFile.Contains(".vpp"))
-            //        {
-            //            try
-            //            {
-            //                OpenToolBlock(vpJob.nameVsProJob, vpJob.VppFile);
-            //                addLog(String.Format($"Open VisionPro Job {vpJob.nameVsProJob} Success"));
-            //            }
-            //            catch
-            //            {
-            //                addLog(String.Format($"Open VisionPro Job {vpJob.nameVsProJob} Error...."));
-            //            }
-            //        }    
-            //    }    
-            //});
-            tsk1.Start();
             tsk2.Start();
-            //tsk3.Start();
-            InnitialCamera1();
-            this.Ready = true;
         }
 
         public void OpenToolBlock(string nameTB, string filePath)
